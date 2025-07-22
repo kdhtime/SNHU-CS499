@@ -45,6 +45,7 @@
             padding: 20px;
             text-align: center;
         }
+        
         footer {
             background-color: #4CAF50;
             color: white;
@@ -63,7 +64,7 @@
     </header>
     <nav>
         <ul class="menuChoices">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#" onclick="hideVideo(); return false;">Home</a></li>
             <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
         </ul>
     </nav>
@@ -81,8 +82,11 @@
         <p>Created by Kenneth Drew Hill - 2025</p>
     </footer>
     <script>
-      function showVideo() {
-        document.getElementById("videoWindow").style.display = "block";}
+        function showVideo() {document.getElementById("videoWindow").style.display = "block";}
+        
+        function hideVideo() {
+            const video = document.getElementById("videoWindow");
+            video.classList.remove("show");}
     </script>
 </body>
 </html>
