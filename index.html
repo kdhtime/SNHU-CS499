@@ -64,7 +64,7 @@
     <nav>
         <ul class="menuChoices">
             <li><a href="#home">Home</a></li>
-            <li><a href="#codeReview">Code Review</a></li>
+            <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
         </ul>
     </nav>
     <main>
@@ -80,5 +80,9 @@
     <footer>
         <p>Created by Kenneth Drew Hill - 2025</p>
     </footer>
+    <script>
+      function showVideo() {
+        document.getElementById("videoWindow").style.display = "block";}
+    </script>
 </body>
 </html>
