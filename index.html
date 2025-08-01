@@ -58,47 +58,50 @@
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Welcome to the ePortfolio for Kenneth Drew Hill</h1>
-        <p>Homepage for SNHU CS-499 Capstone</p>
-    </header>
-    <nav>
-        <ul class="menuChoices">
-            <li><a href="#" onclick="hideVideo(); return false;">Home</a></li>
-            <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
-            <li><a href="#">Artifact 1</a></li>
-            <li><a href="#">Artifact 2</a></li>
-            <li><a href="#">Artifact 3</a></li>
-        </ul>
-    </nav>
-    <main>
+    <body>
+        <header>
+            <h1>Welcome to the ePortfolio for Kenneth Drew Hill</h1>
+            <p>Homepage for SNHU CS-499 Capstone</p>
+        </header>
+        <nav>
+            <ul class="menuChoices">
+                <li><a href="#" onclick="hideVideo(); return false;">Home</a></li>
+                <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
+                <li><a href="#">Artifact 1</a></li>
+                <li><a href="#">Artifact 2</a></li>
+                <li><a href="#">Artifact 3</a></li>
+            </ul>
+        </nav>
+        <main>
             <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-        <pre class="line-numbers">
-            <code class="language-html">
-              &lt;header&gt;
-                &lt;h1&gt;Welcome to the ePortfolio for Kenneth Drew Hill&lt;/h1&gt;
-                &lt;p&gt;Homepage for SNHU CS-499 Capstone&lt;/p&gt;
-              &lt;/header&gt;
-            </code>
-        </pre>
-        <p>This is the homepage for my ePortfolio.</p>
+            
+          <!----  <pre class="line-numbers">
+                <code class="language-html">
+                  &lt;header&gt;
+                    &lt;h1&gt;Welcome to the ePortfolio for Kenneth Drew Hill&lt;/h1&gt;
+                    &lt;p&gt;Homepage for SNHU CS-499 Capstone&lt;/p&gt;
+                  &lt;/header&gt;
+                </code>
+            </pre> ------>
+         
+            
+            <div id="videoWindow" style="display: none; margin-top: 20px;">
+                <video width="500" height="300" controls preload="auto">
+                    <source src="https://raw.githubusercontent.com/kdhtime/SNHU-CS499/main/Video_Code_Review%20-%20Hill,%20Kenneth.mp4" type="video/mp4">
+                    Your browser doesn’t support HTML5 video.
+                </video>
+            </div>
+        </main>
         
-        <div id="videoWindow" style="display: none; margin-top: 20px;">
-            <video width="500" height="300" controls preload="auto">
-                <source src="https://raw.githubusercontent.com/kdhtime/SNHU-CS499/main/Video_Code_Review%20-%20Hill,%20Kenneth.mp4" type="video/mp4">
-                Your browser doesn’t support HTML5 video.
-            </video>
-        </div>
-    </main>
-    <footer>
-        <p>Created by Kenneth Drew Hill - 2025</p>
-    </footer>
-    <script>
-        function showVideo() {document.getElementById("videoWindow").style.display = "block";}
-        function hideVideo() {document.getElementById("videoWindow").style.display = "none";}
-    </script>
-</body>
+        <footer>
+            <p>Created by Kenneth Drew Hill - 2025</p>
+        </footer>
+        
+        <script>
+            function showVideo() {document.getElementById("videoWindow").style.display = "block";}
+            function hideVideo() {document.getElementById("videoWindow").style.display = "none";}
+        </script>
+    </body>
 </html>
