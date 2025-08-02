@@ -67,7 +67,7 @@
             <ul class="menuChoices">
                 <li><a href="#" onclick="hideVideo(); return false;">Home</a></li>
                 <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
-                <li><a href="#">Artifact 1</a></li>
+                <li><a href="#" onClick="toggleArtifact()">Artifact 1</a></li>
                 <li><a href="#">Artifact 2</a></li>
                 <li><a href="#">Artifact 3</a></li>
             </ul>
@@ -76,6 +76,34 @@
             <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+            
+            <!-- 🧭 Artifact 1 Section Triggered via Navigation -->
+            <div id="artifact1-gallery" style="display: none;">
+              <section id="artifact1">
+                <h2>Artifact 1: HTML & CSS Code Showcase</h2>
+                <p>This artifact highlights the structure, styling, and responsiveness of a sample web layout.</p>
+            
+                <div class="code-gallery">
+                  <figure>
+                    <img src="/images/artifact1/Main.png" alt="Header Structure" />
+                    <figcaption>Code Example: Header Structure</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="/images/artifact1/Dog.png" alt="Navigation Layout" />
+                    <figcaption>Code Example: Navigation Menu</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="/images/artifact1/Monkey.png" alt="Responsive Footer" />
+                    <figcaption>Code Example: Footer Styling</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="/images/artifact1/Reserved.png" alt="Media Query Example"/>
+                    <figcaption>Code Example: Media Query Implementation</figcaption>
+                  </figure>
+                </div>
+              </section>
+            </div>
+
             
           <!----  <pre class="line-numbers">
                 <code class="language-html">
@@ -102,6 +130,9 @@
         <script>
             function showVideo() {document.getElementById("videoWindow").style.display = "block";}
             function hideVideo() {document.getElementById("videoWindow").style.display = "none";}
+            function toggleArtifact() {
+                const gallery = document.getElementById("artifact1-gallery");
+                gallery.style.display = (gallery.style.display === "none") ? "block" : "none";}
         </script>
     </body>
 </html>
