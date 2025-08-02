@@ -71,7 +71,7 @@
             <ul class="menuChoices">
                 <li><a href="#" onclick="hideVideo(); return false;">Home</a></li>
                 <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
-                <li><a href="#" onclick="toggleArtifact(); hideVideo(); return false;">Artifact 1</a></li>
+                <li><a href="#" onclick="toggleArtifact(); hideArtifact(); return false;">Artifact 1</a></li>
                 <li><a href="#">Artifact 2</a></li>
                 <li><a href="#">Artifact 3</a></li>
             </ul>
@@ -134,6 +134,7 @@
         <script>
             function showVideo() {document.getElementById("videoWindow").style.display = "block";}
             function hideVideo() {document.getElementById("videoWindow").style.display = "none";}
+            function hideArtifact() {document.getElementById("artifact1-gallery").style.display = "none";}
             function toggleArtifact() {const gallery = document.getElementById("artifact1-gallery");
                 gallery.style.display = (gallery.style.display === "none") ? "block" : "none";}
         </script>
