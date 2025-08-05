@@ -69,9 +69,9 @@
         </header>
         <nav>
             <ul class="menuChoices">
-                <li><a href="#" onclick="hideVideo(); return false;">Home</a></li>
+                <li><a href="#" onclick="showHome(); return false;">Home</a></li>
                 <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
-                <li><a href="#" onclick="showVideo(); return false;">Artifact 1</a></li>
+                <li><a href="#" onclick="showArtifact(); return false;">Artifact 1</a></li>
                 <li><a href="#">Artifact 2</a></li>
                 <li><a href="#">Artifact 3</a></li>
             </ul>
@@ -132,9 +132,27 @@
         </footer>
         
         <script>
-            function showVideo() {document.getElementById("videoWindow").style.display = "block";}
-            function hideVideo() {document.getElementById("videoWindow").style.display = "none";}
-            function hideArtifact() {document.getElementById("artifact1-gallery").style.display = "none";}
+            function hideAllSections() {
+              document.getElementById("artifact1-gallery").style.display = "none";
+              document.getElementById("videoWindow").style.display = "none";
+              // Add other sections like artifact2, artifact3 as needed
+            }
+            
+            function showArtifact() {
+              hideAllSections();
+              document.getElementById("artifact1-gallery").style.display = "block";
+            }
+            
+            function showVideo() {
+              hideAllSections();
+              document.getElementById("videoWindow").style.display = "block";
+            }
+            
+            function showHome() {
+              hideAllSections();
+              // If you have homepage content, unhide it here
+              // Example: document.getElementById("homeSection").style.display = "block";
+            }
         </script>
     </body>
 </html>
