@@ -50,6 +50,24 @@
                 padding: 20px;
                 text-align: center;
             }
+            .about-card {
+                background-color: #fff;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                max-width: 600px;
+                margin: 0 auto;
+                text-align: left;
+            }
+            
+            .no-select {
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                font-size: 1.1em;
+                line-height: 1.6;
+            }
             footer {
                 background-color: #4CAF50;
                 color: white;
@@ -73,7 +91,7 @@
                 <li><a href="#" onclick="showArtifact(); return false;">Artifact 1</a></li>
                 <li><a href="#" onclick="showArtifact2(); return false;">Artifact 2</a></li>
                 <li><a href="#" onclick="showArtifact3(); return false;">Artifact 3</a></li>
-                <li><a href="#" onclick="showABoutMe(); return false;">About Me</a></li>
+                <li><a href="#" onclick="showAboutMe(); return false;">About Me</a></li>
             </ul>
         </nav>
         <main>
@@ -140,6 +158,27 @@
                     </div>
                 </section>
             </div>
+            <div id="aboutMeSection" style="display: none;">
+                <section id="aboutMe">
+                    <h2>About Me</h2>
+                    <div class="about-card">
+                        <p class="no-select" style="text-align: center;"> Kenneth "Drew" Hill
+                        </p>
+                        <p class="no-select">
+                            I began my studies at Southern New Hampshire University three years ago. While working full-time as a Technology Coordinator for a PreK–12 school and attending college full-time, I am now nearing the completion of my Bachelor’s degree in Computer Science, specializing in Software Engineering and Information Security.
+                        </p>
+                        <p class="no-select">
+                            Over the past three years, I have developed a strong foundation in mathematics, programming theory, and the application of programming techniques that are both functional and aligned with industry best practices. My experience in IT, combined with my academic training, has strengthened my problem-solving skills and my ability to translate organizational needs into effective, well-structured technical solutions.
+                        </p>
+                        <p class="no-select">
+                            I hold CompTIA A+, Network+, and Security+ certifications, which have provided me with a deep understanding of hardware, networking, and cybersecurity principles. These credentials complement my programming expertise and position me to bridge the gap between IT operations and software engineering.
+                        </p>
+                        <p class="no-select">
+                            My education has equipped me to design robust software architectures, develop intuitive user interfaces, and follow best practices that ensure both usability and maintainability. I have hands-on experience with Python, C++, JavaScript, and HTML, and I have been consistently recognized by past employers for my ability to learn quickly and adapt to new technologies. My goal is to leverage my combined IT and software skills to transition fully into the software engineering field and deliver high-quality, impactful solutions</p>
+                        </p>
+                    </div>
+                </section>
+            </div>
             <div id="videoWindow" style="display: none; margin-top: 20px;">
                 <video width="500" height="300" controls preload="auto">
                     <source src="https://raw.githubusercontent.com/kdhtime/SNHU-CS499/main/Video_Code_Review%20-%20Hill,%20Kenneth.mp4" type="video/mp4">
@@ -177,6 +216,10 @@
                 hideAllSections();
                 // If you have homepage content, unhide it here
                 // Example: document.getElementById("homeSection").style.display = "block";
+            }
+            function showAboutMe() {
+                hideAllSections();
+                document.getElementById("aboutMeSection").style.display = "block";
             }
         </script>
     </body>
