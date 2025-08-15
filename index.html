@@ -1,224 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.css" rel="stylesheet" />
-        <title>Kenneth D Hill ePortfolio Webpage</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f9;
-                color: #333;
-            }
-            header {
-                background-color: #4CAF50;
-                color: white;
-                padding: 1rem;
-                text-align: center;
-            }
-            nav ul.menuChoices {
-                background-color: #000;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
-            }
-            nav ul.menuChoices li {
-                margin-right: 10px;
-            }
-            nav ul.menuChoices a {
-                color: #ffffff;
-                text-decoration: none;
-                padding: 14px 16px;
-                display: block;
-                font-weight: bold;
-            }
-            nav ul.menuChoices a:hover {
-                background-color: #ddd;
-                color: black;
-            }
-            .code-gallery img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: 0 auto;
-            }
-            main {
-                padding: 20px;
-                text-align: center;
-            }
-            .about-card {
-                background-color: #fff;
-                border-radius: 8px;
-                padding: 20px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                max-width: 600px;
-                margin: 0 auto;
-                text-align: left;
-            }
-            
-            .no-select {
-                user-select: none;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                font-size: 1.1em;
-                line-height: 1.6;
-            }
-            footer {
-                background-color: #4CAF50;
-                color: white;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Welcome to the ePortfolio for Kenneth Drew Hill</h1>
-            <p>Homepage for SNHU CS-499 Capstone</p>
-        </header>
-        <nav>
-            <ul class="menuChoices">
-                <li><a href="#" onclick="showHome(); return false;">Home</a></li>
-                <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
-                <li><a href="#" onclick="showArtifact(); return false;">Artifact 1</a></li>
-                <li><a href="#" onclick="showArtifact2(); return false;">Artifact 2</a></li>
-                <li><a href="#" onclick="showArtifact3(); return false;">Artifact 3</a></li>
-            </ul>
-        </nav>
-        <main>
-            <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-            <div id="homeSection" style="display: block; padding-bottom: 80px;">
-              <section>
-                <h2>Welcome to My Portfolio</h2>
-                <p class="no-select" style="text-align: center;"> Kenneth "Drew" Hill</p>
-                        <p class="no-select">
-                            I began my studies at Southern New Hampshire University three years ago. While working full-time as a Technology Coordinator for a PreK–12 school and attending college full-time, I am now nearing the completion of my Bachelor’s degree in Computer Science, specializing in Software Engineering and Information Security.
-                        </p>
-                        <p class="no-select">
-                            Over the past three years, I have developed a strong foundation in mathematics, programming theory, and the application of programming techniques that are both functional and aligned with industry best practices. My experience in IT, combined with my academic training, has strengthened my problem-solving skills and my ability to translate organizational needs into effective, well-structured technical solutions.
-                        </p>
-                        <p class="no-select">
-                            I hold CompTIA A+, Network+, and Security+ certifications, which have provided me with a deep understanding of hardware, networking, and cybersecurity principles. These credentials complement my programming expertise and position me to bridge the gap between IT operations and software engineering.
-                        </p>
-                        <p class="no-select">
-                            My education has equipped me to design robust software architectures, develop intuitive user interfaces, and follow best practices that ensure both usability and maintainability. I have hands-on experience with Python, C++, JavaScript, and HTML, and I have been consistently recognized by past employers for my ability to learn quickly and adapt to new technologies. My goal is to leverage my combined IT and software skills to transition fully into the software engineering field and deliver high-quality, impactful solutions.</p>
-                        </p>
-              </section>
-            </div>
-            <div id="artifact1-gallery" style="display: none;">
-                <section id="artifact1">
-                    <h2>Artifact 1: Language Porting</h2>
-                    <p>This artifact highlights my Python code, which was rewritten from JavaScript.</p>
-                    <div class="code-gallery">
-                        <figure>
-                            <img src="images/artifact1/Main.png" alt="Header Structure" />
-                            <figcaption>Python Code Main Menu</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/artifact1/Dog.png" alt="Navigation Layout" />
-                            <figcaption>Code Example Dog Intake Questions</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/artifact1/Monkey.png" alt="Responsive Footer" />
-                            <figcaption>Code Example Monkey Intake Questions</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/artifact1/Reserved.png" alt="Media Query Example" />
-                            <figcaption>Code Example Reservation Process</figcaption>
-                        </figure>
-                    </div>
-                </section>
-            </div>
-            <div id="artifact2-gallery" style="display: none;">
-                <section id="artifact2">
-                    <h2>Artifact 2: Whitespace Remover</h2>
-                    <p>I created this code to display my knowledge in working with external files.</p>
-                    <div class="code-gallery">
-                        <figure>
-                            <img src="images/artifact2/artifact2-page1.png" alt="File Whitespace Remover" />
-                            <figcaption>File Whitespace Remover</figcaption>
-                        </figure>
-                    </div>
-                </section>
-            </div>
-            <div id="artifact3-gallery" style="display: none;">
-                <section id="artifact3">
-                    <h2>Artifact 3: Animal Intake Application w/MongoDB</h2>
-                    <p>I created this code to display my knowledge in working with MongoDB.</p>
-                    <div class="code-gallery">
-                        <figure>
-                            <img src="images/artifact3/dbconnection.png" alt="File Whitespace Remover" />
-                            <figcaption>File Whitespace Remover</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/artifact3/dog.png" alt="File Whitespace Remover" />
-                            <figcaption>File Whitespace Remover</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/artifact3/monkey.png" alt="File Whitespace Remover" />
-                            <figcaption>File Whitespace Remover</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/artifact3/reserved.png" alt="File Whitespace Remover" />
-                            <figcaption>Animal Intake Application w/MongoDB</figcaption>
-                        </figure>
-                    </div>
-                </section>
-            </div>
-            
-            <div id="videoWindow" style="display: none; margin-top: 20px;">
-                <video width="500" height="300" controls preload="auto">
-                    <source src="https://raw.githubusercontent.com/kdhtime/SNHU-CS499/main/Video_Code_Review%20-%20Hill,%20Kenneth.mp4" type="video/mp4">
-                    Your browser doesn’t support HTML5 video.
-                </video>
-            </div>
-        </main>
-        <footer>
-            <p>Created by Kenneth Drew Hill - 2025</p>
-        </footer>
-        <script>
-            function hideAllSections() {
-                document.getElementById("homeSection").style.display = "none";
-                document.getElementById("videoWindow").style.display = "none";
-                document.getElementById("artifact1-gallery").style.display = "none";
-                document.getElementById("artifact2-gallery").style.display = "none";
-                document.getElementById("artifact3-gallery").style.display = "none";
-            }
-            
-            function showArtifact() {
-                hideAllSections();
-                document.getElementById("artifact1-gallery").style.display = "block";
-            }
-            
-            function showArtifact2() {
-                hideAllSections();
-                document.getElementById("artifact2-gallery").style.display = "block";
-            }
-            
-            function showArtifact3() {
-                hideAllSections();
-                document.getElementById("artifact3-gallery").style.display = "block";
-            }
-            
-            function showVideo() {
-                hideAllSections();
-                document.getElementById("videoWindow").style.display = "block";
-            }
-            
-            function showHome() {
-                hideAllSections();
-                document.getElementById("homeSection").style.display = "block";
-            }
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.css" rel="stylesheet" />
+    <title>Kenneth D Hill ePortfolio Webpage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      nav ul.menuChoices {
+        background-color: #000;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul.menuChoices li {
+        margin-right: 10px;
+      }
+      nav ul.menuChoices a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 14px 16px;
+        display: block;
+        font-weight: bold;
+      }
+      nav ul.menuChoices a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .code-gallery img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      main {
+        padding: 20px;
+        text-align: center;
+      }
+      .about-card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .no-select {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+      footer {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the ePortfolio for Kenneth Drew Hill</h1>
+      <p>Homepage for SNHU CS-499 Capstone</p>
+    </header>
+    <nav>
+      <ul class="menuChoices">
+        <li><a href="#" onclick="showHome(); return false;">Home</a></li>
+        <li><a href="#" onclick="showVideo(); return false;">Code Review</a></li>
+        <li><a href="#" onclick="showArtifact(); return false;">Artifact 1</a></li>
+        <li><a href="#" onclick="showArtifact2(); return false;">Artifact 2</a></li>
+        <li><a href="#" onclick="showArtifact3(); return false;">Artifact 3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+      <div id="homeSection" style="display: block; padding-bottom: 80px;">
+        <section>
+          <h2>Welcome to My Portfolio</h2>
+          <p class="no-select" style="text-align: center;"> Kenneth "Drew" Hill</p>
+          <p class="no-select">
+            I began my studies at Southern New Hampshire University three years ago. While working full-time as a Technology Coordinator for a PreK–12 school and attending college full-time, I am now nearing the completion of my Bachelor’s degree in Computer Science, specializing in Software Engineering and Information Security.
+          </p>
+          <p class="no-select">
+            Over the past three years, I have developed a strong foundation in mathematics, programming theory, and the application of programming techniques that are both functional and aligned with industry best practices. My experience in IT, combined with my academic training, has strengthened my problem-solving skills and my ability to translate organizational needs into effective, well-structured technical solutions.
+          </p>
+          <p class="no-select">
+            I hold CompTIA A+, Network+, and Security+ certifications, which have provided me with a deep understanding of hardware, networking, and cybersecurity principles. These credentials complement my programming expertise and position me to bridge the gap between IT operations and software engineering.
+          </p>
+          <p class="no-select">
+            My education has equipped me to design robust software architectures, develop intuitive user interfaces, and follow best practices that ensure both usability and maintainability. I have hands-on experience with Python, C++, JavaScript, and HTML, and I have been consistently recognized by past employers for my ability to learn quickly and adapt to new technologies. My goal is to leverage my combined IT and software skills to transition fully into the software engineering field and deliver high-quality, impactful solutions.</p>
+          </p>
+        </section>
+      </div>
+      <div id="artifact1-gallery" style="display: none;">
+        <section id="artifact1">
+          <h2>Artifact 1: Language Porting</h2>
+          <p>This artifact highlights my Python code, which was rewritten from JavaScript.</p>
+          <div class="code-gallery">
+            <figure>
+              <figcaption>Python Code Main Menu</figcaption>
+              <img src="images/artifact1/Main.png" />
+            </figure>
+            <figure>
+              <figcaption>Code Example Dog Intake Questions</figcaption>
+              <img src="images/artifact1/Dog.png" />
+            </figure>
+            <figure>
+              <figcaption>Code Example Monkey Intake Questions</figcaption>
+              <img src="images/artifact1/Monkey.png" />
+            </figure>
+            <figure>
+              <figcaption>Code Example Reservation Process</figcaption>
+              <img src="images/artifact1/Reserved.png" />
+            </figure>
+          </div>
+        </section>
+      </div>
+      <div id="artifact2-gallery" style="display: none;">
+        <section id="artifact2">
+          <h2>Artifact 2: Whitespace Remover</h2>
+          <p>I created this code to display my knowledge in working with external files.</p>
+          <div class="code-gallery">
+            <figure>
+              <figcaption>File Whitespace Remover</figcaption>
+              <img src="images/artifact2/artifact2-page1.png" />
+            </figure>
+          </div>
+        </section>
+      </div>
+      <div id="artifact3-gallery" style="display: none;">
+        <section id="artifact3">
+          <h2>Artifact 3: Animal Intake Application w/MongoDB</h2>
+          <p>I created this code to display my knowledge in working with MongoDB.</p>
+          <div class="code-gallery">
+            <figure>
+              <figcaption>Database Connection Defined</figcaption>
+              <img src="images/artifact3/dbconnection.png" />
+            </figure>
+            <figure>
+              <figcaption>Dog questions that now reference the database</figcaption>
+              <img src="images/artifact3/dog.png" />
+            </figure>
+            <figure>
+              <figcaption>Monkey questions that now reference the database</figcaption>
+              <img src="images/artifact3/monkey.png" />
+            </figure>
+            <figure>
+              <figcaption>Change the reservation status of animals</figcaption>
+              <img src="images/artifact3/reserved.png" />
+            </figure>
+          </div>
+        </section>
+      </div>
+      <div id="videoWindow" style="display: none; margin-top: 20px;">
+        <video width="500" height="300" controls preload="auto">
+          <source src="https://raw.githubusercontent.com/kdhtime/SNHU-CS499/main/Video_Code_Review%20-%20Hill,%20Kenneth.mp4" type="video/mp4">
+          Your browser doesn’t support HTML5 video.
+        </video>
+      </div>
+    </main>
+    <footer>
+      <p>Created by Kenneth Drew Hill - 2025</p>
+    </footer>
+    <script>
+      function hideAllSections() {
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("videoWindow").style.display = "none";
+        document.getElementById("artifact1-gallery").style.display = "none";
+        document.getElementById("artifact2-gallery").style.display = "none";
+        document.getElementById("artifact3-gallery").style.display = "none";
+      }
+      function showArtifact() {
+        hideAllSections();
+        document.getElementById("artifact1-gallery").style.display = "block";
+      }
+      function showArtifact2() {
+        hideAllSections();
+        document.getElementById("artifact2-gallery").style.display = "block";
+      }
+      function showArtifact3() {
+        hideAllSections();
+        document.getElementById("artifact3-gallery").style.display = "block";
+      }
+      function showVideo() {
+        hideAllSections();
+        document.getElementById("videoWindow").style.display = "block";
+      }
+      function showHome() {
+        hideAllSections();
+        document.getElementById("homeSection").style.display = "block";
+      }
+    </script>
+  </body>
 </html>
